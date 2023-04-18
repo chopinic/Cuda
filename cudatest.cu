@@ -1,4 +1,19 @@
 #include<iostream>
+
+
+__global__ void add(float* x, float * y, float* z, int n)
+{
+    // 获取全局索引
+    int index = threadIdx.x + blockIdx.x * blockDim.x;
+    // 步长
+    int stride = blockDim.x * gridDim.x;
+    for (int i = index; i < n; i += stride)
+    {
+        z[i] = x[i] + y[i];
+    }
+}
+
+
 int main()
 {
     int N = 1 << 20;

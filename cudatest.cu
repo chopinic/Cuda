@@ -15,15 +15,15 @@ void printDeviceProperties()
 {
   int N;
   cudaGetDeviceCount(&N);
-  for (int i = 0; i < N; i++) {
-    cudaDeviceProp prop;
-    cudaGetDeviceProperties(&prop, i);
-    std::cout << "Device name: " << prop.name << "\n";
-    std::cout << "Clock frequency (kHz): " << prop.clockRate << "\n";
-    std::cout << "Number of streaming multiprocessors: " << prop.multiProcessorCount << "\n";
-    std::cout << "Maximum number of threads per block: " << prop.maxThreadsPerBlock << "\n";
-    std::cout << "Warp size: " << prop.warpSize << "\n";
-  }
+//   for (int i = 0; i < N; i++) {
+//     cudaDeviceProp prop;
+//     cudaGetDeviceProperties(&prop, i);
+//     std::cout << "Device name: " << prop.name << "\n";
+//     std::cout << "Clock frequency (kHz): " << prop.clockRate << "\n";
+//     std::cout << "Number of streaming multiprocessors: " << prop.multiProcessorCount << "\n";
+//     std::cout << "Maximum number of threads per block: " << prop.maxThreadsPerBlock << "\n";
+//     std::cout << "Warp size: " << prop.warpSize << "\n";
+//   }
 }
 
 //----- Task 2 -----//

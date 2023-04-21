@@ -1,12 +1,20 @@
-TEST_SOURCE = cudatest.cu
+SOURCE_FILE_LOOP = number_crunching_loop.cu
+TARGETBIN_LOOP := ./loopgpu
 
-TARGETBIN := ./cudatest
+SOURCE_FILE_TASK = number_crunching_task.cu
+TARGETBIN_TASK := ./taskgpu
 
 CC = nvcc
 
-$(TARGETBIN):$(TEST_SOURCE)
-	$(CC)  $(TEST_SOURCE) -o $(TARGETBIN)  -rdc=true -std=c++11
+loopgpu: $(SOURCE_FILE_LOOP)
+	$(CC)  $(SOURCE_FILE_LOOP) -O0 -o $(TARGETBIN_LOOP)  -rdc=true -std=c++11
+
+
+taskgpu: $(SOURCE_FILE_TASK)
+	$(CC)  $(SOURCE_FILE_TASK) -O0 -o $(TARGETBIN_TASK)  -rdc=true -std=c++11
+
 
 .PHONY:clean
 clean:
-	-rm -rf $(TARGETBIN)
+	-rm -rf $(TARGETBIN_LOOP)
+	-rm -rf $(TARGETBIN_TASK)

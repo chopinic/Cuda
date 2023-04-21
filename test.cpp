@@ -1,6 +1,36 @@
-#include <iostream>
-
-using namespace std;
-int main(){
-    cout<<"hello world";
-}
+21083 for 2 and 2
+12472 for 2 and 4
+7480 for 2 and 8
+4899 for 2 and 16
+3706 for 2 and 32
+2838 for 2 and 64
+10963 for 4 and 2
+6272 for 4 and 4
+3741 for 4 and 8
+2703 for 4 and 16
+2313 for 4 and 32
+1955 for 4 and 64
+6128 for 8 and 2
+3327 for 8 and 4
+2630 for 8 and 8
+1867 for 8 and 16
+1764 for 8 and 32
+1483 for 8 and 64
+3191 for 16 and 2
+2359 for 16 and 4
+1612 for 16 and 8
+1474 for 16 and 16
+1443 for 16 and 32
+1375 for 16 and 64
+1736 for 32 and 2
+1401 for 32 and 4
+1315 for 32 and 8
+1318 for 32 and 16
+1295 for 32 and 32
+1436 for 32 and 64
+1331 for 64 and 2
+1214 for 64 and 4
+1251 for 64 and 8
+1294 for 64 and 16
+1340 for 64 and 32
+1325 for 64 and 64
